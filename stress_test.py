@@ -3,7 +3,7 @@ from multiprocessing import Process
 
 number_procs = 100000
 number_threads = 4
-webserver = "insert website here"
+webserver = "{{INSERT_WEBSITE_HERE}}"
 
 class RequestThread(threading.Thread):
     def run(self):
