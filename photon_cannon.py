@@ -20,7 +20,7 @@ def request(number_threads):
 
 if __name__ == '__main__':
     procs = []
-    print(f"Firing The Photon Blaster: Powerlevel {number_procs} - {number_threads}!!!")
+    print(f"Firing The Photon Cannon: Powerlevel {number_procs} - {number_threads}!!!")
     for i in range(number_procs):
         p = Process(target=request, args=(number_threads,))
         p.start()
